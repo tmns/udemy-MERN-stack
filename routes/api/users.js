@@ -15,7 +15,7 @@ const User = require('../../models/User');
 const validateRegisterInput = require('../../validation/register');
 
 // load login validation
-const validateUserInput = require('../../validation/login');
+const validateLoginInput = require('../../validation/login');
 
 // @route GET api/posts/test
 // @desc Test users route
@@ -117,6 +117,5 @@ router.get('/current', passport.authenticate('jwt', { session: false }), (req, r
         email: req.user.email
     })
 })
-
 
 module.exports = router;

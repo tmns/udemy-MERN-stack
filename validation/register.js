@@ -4,20 +4,20 @@ const isEmpty = require('./is_empty');
 module.exports = function valdiateRegisterInput(data) {
     let errors = {};
 
-    if (!Validator.isLength(data.name, { min: 2, max: 30 })) {
-        errors.name = 'Name must be between 2 and 30 characters';
-    }
-
     data.name = !isEmpty(data.name) ? data.name : '';
     data.email = !isEmpty(data.email) ? data.email : '';
     data.password = !isEmpty(data.password) ? data.password : '';
     data.password2 = !isEmpty(data.password2) ? data.password2 : '';
 
-    if (!Validator.isEmpty(data.name)) {
+    if (Validator.isEmpty(data.name)) {
         errors.name = 'Name field is required.'
     }
 
-    if (!Validator.isEmpty(data.email)) {
+    if (!Validator.isLength(data.name, { min: 2, max: 30 })) {
+        errors.name = 'Name must be between 2 and 30 characters';
+    }
+
+    if (Validator.isEmpty(data.email)) {
         errors.email = 'Email field is required.'
     }
 
@@ -25,7 +25,7 @@ module.exports = function valdiateRegisterInput(data) {
         errors.email = 'Email is invalid.'
     }
 
-    if (!Validator.isEmpty(data.password)) {
+    if (Validator.isEmpty(data.password)) {
         errors.password = 'Password field is required.'
     }
 
@@ -33,14 +33,13 @@ module.exports = function valdiateRegisterInput(data) {
         errors.passowrd = 'Password must be at least six characters'
     }
 
-    if (!Validator.isEmpty(data.password2)) {
+    if (Validator.isEmpty(data.password2)) {
         errors.password2 = 'Confirm Password field is required.'
     }
 
     if (!Validator.equals(data.password, data.password2)) {
         errors.password2 = 'Passwords must match'
     }
-
 
     return {
         errors,
