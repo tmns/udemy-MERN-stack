@@ -184,7 +184,6 @@ router.post('/education', passport.authenticate('jwt', { session: false }), (req
     const { errors, isValid } = validateEducationInput(req.body);
 
     if (!isValid) {
-        console.log(errors)
         return res.status(404).json(errors);
     }
 
