@@ -2,7 +2,7 @@ const Validator = require('validator');
 const isEmpty = require('./is_empty');
 
 module.exports = function validateExperienceInput(data) {
-    let errors = [];
+    let errors = {};
 
     data.title = !isEmpty(data.title) ? data.title : '';
     data.company = !isEmpty(data.company) ? data.company : '';
@@ -13,11 +13,11 @@ module.exports = function validateExperienceInput(data) {
     }
 
     if (Validator.isEmpty(data.company)) {
-        errors.title = 'Job company field is required.';
+        errors.company = 'Job company field is required.';
     }
 
     if (Validator.isEmpty(data.from)) {
-        errors.title = 'From date field is required.';
+        errors.from = 'From date field is required.';
     }
 
     return {

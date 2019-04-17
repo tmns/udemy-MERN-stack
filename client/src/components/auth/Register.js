@@ -23,7 +23,6 @@ class Register extends Component {
 
     // redirect logged in users to dashboard
     componentDidMount() {
-        console.log('[Register] componentdidmount', this.props.isAuthenticated)
         if (this.props.auth.isAuthenticated) {
             this.props.history.push('/dashboard');
         }
