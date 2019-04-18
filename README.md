@@ -16,6 +16,46 @@
 * Test with the Redux Chrome extension
 * Create a build script and deploy to Heroku using Git
 
-...and much more!
-
 #### It's a great course and I highly recommend it!
+
+#### Below are some screenshots of the app you build throughout the course - a social network type for developers, with profiles, posts, comments, likes, and GitHub integration.
+
+Basic landing page
+
+![](/home/meth/webdev-practice/js-practice/udemy-MERN-stack/screens/landing.png)
+
+
+
+User dashboard available after successful authN.
+
+![](/home/meth/webdev-practice/js-practice/udemy-MERN-stack/screens/dashboard.png)
+
+
+
+Clicking on the Add Education button from the dashboard leads to a form allowing the user to add education credentials, complete with error handling.
+
+![](/home/meth/webdev-practice/js-practice/udemy-MERN-stack/screens/add-edu.png)
+
+
+
+The general profiles page, which lists all registered profiles and a summary of their respective skill sets.
+
+![](/home/meth/webdev-practice/js-practice/udemy-MERN-stack/screens/profilles.png)
+
+
+
+Clicking a View Profile button from above leads you to a single profile page, presenting the user with all profile details.
+
+![](/home/meth/webdev-practice/js-practice/udemy-MERN-stack/screens/profile.png)
+
+
+
+The app also offers a feed of all posts to be viewed in batch by the user, who can in turn like, dislike and comment on them (plus remove their own).
+
+![](/home/meth/webdev-practice/js-practice/udemy-MERN-stack/screens/posts.png)
+
+
+
+The user can then view all comments for a single post, with the ability to post a new one and / or delete their own.
+
+![](/home/meth/webdev-practice/js-practice/udemy-MERN-stack/screens/comments.png)
